@@ -9,13 +9,13 @@
         <li class="nav-item">
           <%= link_to 'About us', home_about_path, class:"nav-link"%>
         </li>
+        <%if user_signed_in?%>
         <li class="nav-item">
           <%= link_to 'Friends', friends_lists_path, class:"nav-link"%>
         </li>
         <li class="nav-item">
           <%= link_to 'Add Friend', new_friends_list_path, class:"nav-link"%>
         </li>
-        <%if user_signed_in?%>
         <li class="nav-item">
           <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"nav-link"%>
         </li>
